@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card & Points Optimization Platform</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#003366',
+                        'secondary-teal': '#006666',
+                        'accent-orange': '#FF9900',
+                        'text-dark-grey': '#333333',
+                        'light-grey': '#F2F2F2',
+                        'brand-white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        'lato': ['Lato', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'subtle': '0 4px 12px rgba(0,0,0,0.05)',
+                        'lifted': '0 10px 20px rgba(0,0,0,0.07), 0 6px 6px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-open-sans text-text-dark-grey bg-brand-white">
+
+    <!-- Header -->
+    <header id="main-header" class="bg-brand-white/90 backdrop-blur-md shadow-subtle fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="assets/logo_placeholder.svg" alt="Platform Logo" class="h-10 w-auto">
+                <span class="font-lato text-2xl font-bold text-primary-blue">PointPilot</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-primary-blue hover:text-accent-orange font-semibold transition-colors duration-300">Home</a>
+                <a href="#" class="hover:text-accent-orange transition-colors duration-300">Credit Cards</a>
+                <a href="news_deals.html" class="hover:text-accent-orange transition-colors duration-300">News & Deals</a>
+                <a href="#" class="hover:text-accent-orange transition-colors duration-300">Learn</a>
+                <a href="#" class="hover:text-accent-orange transition-colors duration-300">Tools</a>
+                <a href="#" class="bg-accent-orange text-brand-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300 font-semibold text-sm">Get Started</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-primary-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-white shadow-lg">
+            <a href="index.html" class="block py-2 px-6 text-primary-blue hover:bg-light-grey">Home</a>
+            <a href="#" class="block py-2 px-6 hover:bg-light-grey">Credit Cards</a>
+            <a href="news_deals.html" class="block py-2 px-6 hover:bg-light-grey">News & Deals</a>
+            <a href="#" class="block py-2 px-6 hover:bg-light-grey">Learn</a>
+            <a href="#" class="block py-2 px-6 hover:bg-light-grey">Tools</a>
+            <a href="#" class="block py-3 px-6 bg-accent-orange text-brand-white text-center font-semibold hover:bg-orange-600">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 bg-primary-blue text-brand-white" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(0, 51, 102, 0.7);">
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <h1 class="font-lato text-4xl md:text-6xl font-bold mb-6 leading-tight">Unlock Premium Travel. Master Your Points.</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">Become the premier destination for credit card and travel points optimization. Maximize rewards, minimize costs.</p>
+            <a href="#" class="bg-accent-orange text-brand-white px-10 py-4 rounded-full hover:bg-orange-600 transition-all duration-300 font-lato font-semibold text-lg inline-flex items-center space-x-2 transform hover:scale-105">
+                <span>Discover How</span>
+                <img src="assets/icon_arrow_right.svg" alt="Arrow right" class="w-5 h-5">
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Cards & Deals Section -->
+    <section class="py-16 md:py-24 bg-light-grey">
+        <div class="container mx-auto px-6">
+            <h2 class="font-lato text-3xl md:text-4xl font-bold text-center mb-4 text-primary-blue">Featured Credit Cards</h2>
+            <p class="text-center text-lg text-text-dark-grey mb-12 max-w-2xl mx-auto">Explore top card offers curated to maximize your rewards and travel benefits.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-white rounded-xl shadow-subtle p-8 hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=800&auto=format&fit=crop" alt="Credit Card 1" class="rounded-lg mb-6 h-40 w-full object-cover">
+                    <h3 class="font-lato text-2xl font-bold text-secondary-teal mb-3">Chase Sapphire Preferred</h3>
+                    <p class="text-text-dark-grey mb-4 text-sm flex-grow">Earn 60,000 bonus points after you spend $4,000 on purchases in the first 3 months. Ideal for travel and dining.</p>
+                    <a href="#" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">Learn More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1"></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-brand-white rounded-xl shadow-subtle p-8 hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1607004468138-08735ea4845d?q=80&w=800&auto=format&fit=crop" alt="Credit Card 2" class="rounded-lg mb-6 h-40 w-full object-cover">
+                    <h3 class="font-lato text-2xl font-bold text-secondary-teal mb-3">Amex Gold Card</h3>
+                    <p class="text-text-dark-grey mb-4 text-sm flex-grow">4X points at U.S. supermarkets (on up to $25,000 per calendar year in purchases, then 1X). Perfect for foodies.</p>
+                    <a href="#" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">Learn More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1"></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-brand-white rounded-xl shadow-subtle p-8 hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1560520658-7259704917a9?q=80&w=800&auto=format&fit=crop" alt="Credit Card 3" class="rounded-lg mb-6 h-40 w-full object-cover">
+                    <h3 class="font-lato text-2xl font-bold text-secondary-teal mb-3">Capital One Venture X</h3>
+                    <p class="text-text-dark-grey mb-4 text-sm flex-grow">Enjoy a $300 annual travel credit and 10,000 bonus miles every account anniversary (equal to $100 towards travel).</p>
+                    <a href="#" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">Learn More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News & Insights Section -->
+    <section class="py-16 md:py-24 bg-brand-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-lato text-3xl md:text-4xl font-bold text-center mb-4 text-primary-blue">Latest News & Insights</h2>
+            <p class="text-center text-lg text-text-dark-grey mb-12 max-w-2xl mx-auto">Stay updated with the newest credit card offers, points strategies, and travel deals.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-light-grey/50 rounded-xl shadow-subtle overflow-hidden hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=800&auto=format&fit=crop" alt="Article 1" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-lato text-xl font-bold text-primary-blue mb-2">New Amex Offer: Earn 100k Bonus Points!</h3>
+                        <p class="text-text-dark-grey text-sm mb-4 flex-grow">Discover the latest limited-time offer from American Express and how you can maximize its value for your next big trip.</p>
+                        <a href="news_deals.html" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">Read More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1"></a>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                 <div class="bg-light-grey/50 rounded-xl shadow-subtle overflow-hidden hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=800&auto=format&fit=crop" alt="Article 2" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-lato text-xl font-bold text-primary-blue mb-2">Maximizing Points with Everyday Spending</h3>
+                        <p class="text-text-dark-grey text-sm mb-4 flex-grow">Learn smart strategies to accumulate more points from your daily purchases without changing your habits.</p>
+                        <a href="news_deals.html" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">Read More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1"></a>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                 <div class="bg-light-grey/50 rounded-xl shadow-subtle overflow-hidden hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1505832688465-95940a5bb5bf?q=80&w=800&auto=format&fit=crop" alt="Article 3" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-lato text-xl font-bold text-primary-blue mb-2">Travel Deal: Fly to Europe for 30k Miles</h3>
+                        <p class="text-text-dark-grey text-sm mb-4 flex-grow">Uncover an amazing travel deal that can get you to your dream European destination for significantly fewer miles.</p>
+                        <a href="news_deals.html" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">Read More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Content Teasers Section -->
+    <section class="py-16 md:py-24 bg-secondary-teal/10">
+        <div class="container mx-auto px-6">
+            <h2 class="font-lato text-3xl md:text-4xl font-bold text-center mb-4 text-primary-blue">Master Your Points Game</h2>
+            <p class="text-center text-lg text-text-dark-grey mb-12 max-w-2xl mx-auto">From beginner basics to advanced strategies, our educational library has you covered.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Teaser 1 -->
+                <div class="bg-brand-white p-8 rounded-xl shadow-subtle hover:shadow-lifted transition-shadow duration-300 text-center">
+                    <img src="assets/icon_education.svg" alt="Education Icon" class="w-16 h-16 mx-auto mb-4 text-secondary-teal">
+                    <h3 class="font-lato text-xl font-bold text-secondary-teal mb-3">Beginner's Guide to Points</h3>
+                    <p class="text-text-dark-grey text-sm mb-6">New to points and miles? Start here to learn the fundamentals and kickstart your rewards journey.</p>
+                    <a href="#" class="text-accent-orange hover:text-orange-600 font-semibold transition-colors duration-300">Learn More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1 inline"></a>
+                </div>
+                <!-- Teaser 2 -->
+                <div class="bg-brand-white p-8 rounded-xl shadow-subtle hover:shadow-lifted transition-shadow duration-300 text-center">
+                    <img src="assets/icon_education.svg" alt="Education Icon" class="w-16 h-16 mx-auto mb-4 text-secondary-teal">
+                    <h3 class="font-lato text-xl font-bold text-secondary-teal mb-3">Advanced Redemption Strategies</h3>
+                    <p class="text-text-dark-grey text-sm mb-6">Ready to take your points game to the next level? Explore expert tactics for high-value redemptions.</p>
+                    <a href="#" class="text-accent-orange hover:text-orange-600 font-semibold transition-colors duration-300">Learn More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1 inline"></a>
+                </div>
+                <!-- Teaser 3 -->
+                <div class="bg-brand-white p-8 rounded-xl shadow-subtle hover:shadow-lifted transition-shadow duration-300 text-center">
+                    <img src="assets/icon_education.svg" alt="Education Icon" class="w-16 h-16 mx-auto mb-4 text-secondary-teal">
+                    <h3 class="font-lato text-xl font-bold text-secondary-teal mb-3">Understanding Credit Scores</h3>
+                    <p class="text-text-dark-grey text-sm mb-6">Learn how credit scores impact your card applications and how to improve yours for better approvals.</p>
+                    <a href="#" class="text-accent-orange hover:text-orange-600 font-semibold transition-colors duration-300">Learn More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1 inline"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 md:py-24 bg-primary-blue text-brand-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-lato text-3xl md:text-4xl font-bold mb-4">Subscribe for Expert Tips</h2>
+            <p class="text-lg mb-8 max-w-xl mx-auto opacity-90">Get the latest deals, strategies, and insights delivered straight to your inbox.</p>
+            <form class="max-w-lg mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Enter your email address" class="flex-grow px-6 py-3 rounded-full text-text-dark-grey focus:outline-none focus:ring-2 focus:ring-accent-orange" required>
+                <button type="submit" class="bg-accent-orange text-brand-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors duration-300 font-semibold">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-blue text-light-grey/80 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <img src="assets/logo_placeholder.svg" alt="Platform Logo" class="h-10 w-auto filter brightness-0 invert">
+                         <span class="font-lato text-2xl font-bold text-brand-white">PointPilot</span>
+                    </a>
+                    <p class="text-sm leading-relaxed">Your ultimate resource for maximizing credit card rewards and achieving premium travel experiences.</p>
+                </div>
+                <div>
+                    <h5 class="font-lato text-lg font-semibold text-brand-white mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Credit Cards</a></li>
+                        <li><a href="news_deals.html" class="hover:text-accent-orange transition-colors duration-300">News & Deals</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Learn</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-lato text-lg font-semibold text-brand-white mb-4">Company</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-lato text-lg font-semibold text-brand-white mb-4">Legal</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary-teal/30 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-center md:text-left mb-4 md:mb-0">&copy; <span id="currentYear"></span> PointPilot. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="text-light-grey/80 hover:text-accent-orange transition-colors duration-300">
+                        <img src="assets/icon_facebook.svg" alt="Facebook" class="w-6 h-6">
+                    </a>
+                    <a href="#" aria-label="Twitter" class="text-light-grey/80 hover:text-accent-orange transition-colors duration-300">
+                         <img src="assets/icon_twitter.svg" alt="Twitter" class="w-6 h-6">
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-light-grey/80 hover:text-accent-orange transition-colors duration-300">
+                        <img src="assets/icon_linkedin.svg" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

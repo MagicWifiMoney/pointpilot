@@ -1,0 +1,41 @@
+/* Import Google Fonts - also done in HTML for redundancy, but good practice */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap');
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for a more refined look - optional */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F2F2F2; /* light-grey */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006666; /* secondary-teal */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004c4c; /* darker teal */
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add a bit more top padding when header is sticky and scrolled */
+.header-scrolled {
+    /* Example: if header height changes on scroll, adjust this */
+    /* padding-top: 80px; /* Adjust based on actual sticky header height */
+}
+
+/* Specific icon coloring if needed beyond Tailwind classes */
+.icon-teal {
+    fill: #006666; /* secondary-teal */
+}

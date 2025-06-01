@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Deals Hub - PointPilot</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#003366',
+                        'secondary-teal': '#006666',
+                        'accent-orange': '#FF9900',
+                        'text-dark-grey': '#333333',
+                        'light-grey': '#F2F2F2',
+                        'brand-white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        'lato': ['Lato', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'subtle': '0 4px 12px rgba(0,0,0,0.05)',
+                        'lifted': '0 10px 20px rgba(0,0,0,0.07), 0 6px 6px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .article-content img {
+            border-radius: 0.5rem; /* Tailwind's rounded-lg */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .article-content table {
+            width: 100%;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-collapse: collapse;
+        }
+        .article-content th, .article-content td {
+            border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+            padding: 0.75rem 1rem; /* Tailwind's p-3 px-4 */
+            text-align: left;
+        }
+        .article-content th {
+            background-color: #f3f4f6; /* Tailwind's gray-100 */
+            font-weight: 600; /* Tailwind's font-semibold */
+        }
+        .article-content svg {
+            max-width: 100%;
+            height: auto;
+            margin: 1.5rem auto;
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-open-sans text-text-dark-grey bg-brand-white">
+
+    <!-- Header -->
+    <header id="main-header" class="bg-brand-white/90 backdrop-blur-md shadow-subtle fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="assets/logo_placeholder.svg" alt="Platform Logo" class="h-10 w-auto">
+                <span class="font-lato text-2xl font-bold text-primary-blue">PointPilot</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-primary-blue hover:text-accent-orange font-semibold transition-colors duration-300">Home</a>
+                <a href="#" class="hover:text-accent-orange transition-colors duration-300">Credit Cards</a>
+                <a href="news_deals.html" class="hover:text-accent-orange transition-colors duration-300">News & Deals</a>
+                <a href="#" class="hover:text-accent-orange transition-colors duration-300">Learn</a>
+                <a href="#" class="hover:text-accent-orange transition-colors duration-300">Tools</a>
+                <a href="#" class="bg-accent-orange text-brand-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300 font-semibold text-sm">Get Started</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-primary-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-white shadow-lg">
+            <a href="index.html" class="block py-2 px-6 text-primary-blue hover:bg-light-grey">Home</a>
+            <a href="#" class="block py-2 px-6 hover:bg-light-grey">Credit Cards</a>
+            <a href="news_deals.html" class="block py-2 px-6 hover:bg-light-grey">News & Deals</a>
+            <a href="#" class="block py-2 px-6 hover:bg-light-grey">Learn</a>
+            <a href="#" class="block py-2 px-6 hover:bg-light-grey">Tools</a>
+            <a href="#" class="block py-3 px-6 bg-accent-orange text-brand-white text-center font-semibold hover:bg-orange-600">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="pt-24 md:pt-32 bg-primary-blue text-brand-white" style="background-image: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1900&auto=format&fit=crop'); background-size: cover; background-position: center center; background-blend-mode: overlay; background-color: rgba(0, 51, 102, 0.8);">
+        <div class="container mx-auto px-6 py-16 md:py-20 text-center">
+            <h1 class="font-lato text-4xl md:text-5xl font-bold mb-4 leading-tight">Credit Card News & Deals Hub</h1>
+            <p class="text-lg md:text-xl mb-2 max-w-3xl mx-auto opacity-90">Your central source for the latest updates, analyses, and guides in the world of credit cards and rewards.</p>
+        </div>
+    </section>
+
+    <!-- Sub-navigation / Filters -->
+    <section class="py-8 bg-light-grey border-b border-gray-200">
+        <div class="container mx-auto px-6 flex flex-wrap justify-center gap-2 md:gap-4">
+            <button class="px-6 py-2 bg-secondary-teal text-brand-white rounded-full font-semibold hover:bg-teal-700 transition-colors text-sm shadow-sm">All Articles</button>
+            <button class="px-6 py-2 bg-brand-white text-secondary-teal border border-secondary-teal rounded-full font-semibold hover:bg-secondary-teal/10 transition-colors text-sm shadow-sm">Breaking News</button>
+            <button class="px-6 py-2 bg-brand-white text-secondary-teal border border-secondary-teal rounded-full font-semibold hover:bg-secondary-teal/10 transition-colors text-sm shadow-sm">Analyses</button>
+            <button class="px-6 py-2 bg-brand-white text-secondary-teal border border-secondary-teal rounded-full font-semibold hover:bg-secondary-teal/10 transition-colors text-sm shadow-sm">Strategy Guides</button>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="py-12 md:py-16 bg-brand-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- Featured Article / Breaking News -->
+            <div class="mb-16">
+                <h2 class="font-lato text-3xl md:text-4xl font-bold text-primary-blue mb-6 text-left">Spotlight</h2>
+                <div id="article-breaking-news" class="prose max-w-none prose-lg xl:prose-xl bg-light-grey/30 p-6 md:p-10 rounded-xl shadow-subtle article-content hover:shadow-lifted transition-shadow duration-300">
+                    <p class="text-center text-gray-500 py-8">Loading breaking news...</p>
+                </div>
+            </div>
+
+            <!-- Other Articles Grid -->
+            <h2 class="font-lato text-3xl md:text-4xl font-bold text-primary-blue mb-8 text-left">Analyses & Guides</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div id="article-analysis-rewards" class="prose max-w-none prose-lg bg-light-grey/30 p-6 md:p-8 rounded-xl shadow-subtle article-content hover:shadow-lifted transition-shadow duration-300">
+                     <p class="text-center text-gray-500 py-8">Loading analysis...</p>
+                </div>
+                <div id="article-guide-dining" class="prose max-w-none prose-lg bg-light-grey/30 p-6 md:p-8 rounded-xl shadow-subtle article-content hover:shadow-lifted transition-shadow duration-300">
+                     <p class="text-center text-gray-500 py-8">Loading guide...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Placeholders for Future Content -->
+    <section class="py-12 md:py-16 bg-light-grey/50 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <h2 class="font-lato text-3xl md:text-4xl font-bold text-primary-blue mb-10 text-center">More To Explore</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-white rounded-xl shadow-subtle p-6 hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <div class="bg-gray-300 h-40 rounded-lg mb-4 animate-pulse"></div>
+                    <h3 class="font-lato text-xl font-bold text-secondary-teal mb-2 h-6 bg-gray-300 rounded animate-pulse w-3/4"></h3>
+                    <p class="text-text-dark-grey text-sm mb-3 h-4 bg-gray-300 rounded animate-pulse w-full"></p>
+                    <p class="text-text-dark-grey text-sm mb-4 h-4 bg-gray-300 rounded animate-pulse w-5/6"></p>
+                    <a href="#" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">
+                        Read More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1">
+                    </a>
+                </div>
+                 <div class="bg-brand-white rounded-xl shadow-subtle p-6 hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <div class="bg-gray-300 h-40 rounded-lg mb-4 animate-pulse"></div>
+                    <h3 class="font-lato text-xl font-bold text-secondary-teal mb-2 h-6 bg-gray-300 rounded animate-pulse w-3/4"></h3>
+                    <p class="text-text-dark-grey text-sm mb-3 h-4 bg-gray-300 rounded animate-pulse w-full"></p>
+                    <p class="text-text-dark-grey text-sm mb-4 h-4 bg-gray-300 rounded animate-pulse w-5/6"></p>
+                    <a href="#" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">
+                        Read More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1">
+                    </a>
+                </div>
+                 <div class="bg-brand-white rounded-xl shadow-subtle p-6 hover:shadow-lifted transition-shadow duration-300 flex flex-col">
+                    <div class="bg-gray-300 h-40 rounded-lg mb-4 animate-pulse"></div>
+                    <h3 class="font-lato text-xl font-bold text-secondary-teal mb-2 h-6 bg-gray-300 rounded animate-pulse w-3/4"></h3>
+                    <p class="text-text-dark-grey text-sm mb-3 h-4 bg-gray-300 rounded animate-pulse w-full"></p>
+                    <p class="text-text-dark-grey text-sm mb-4 h-4 bg-gray-300 rounded animate-pulse w-5/6"></p>
+                    <a href="#" class="mt-auto text-accent-orange hover:text-orange-600 font-semibold inline-flex items-center transition-colors duration-300">
+                        Read More <img src="assets/icon_arrow_right.svg" alt="Arrow" class="w-4 h-4 ml-1">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-blue text-light-grey/80 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <img src="assets/logo_placeholder.svg" alt="Platform Logo" class="h-10 w-auto filter brightness-0 invert">
+                         <span class="font-lato text-2xl font-bold text-brand-white">PointPilot</span>
+                    </a>
+                    <p class="text-sm leading-relaxed">Your ultimate resource for maximizing credit card rewards and achieving premium travel experiences.</p>
+                </div>
+                <div>
+                    <h5 class="font-lato text-lg font-semibold text-brand-white mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Credit Cards</a></li>
+                        <li><a href="news_deals.html" class="hover:text-accent-orange transition-colors duration-300">News & Deals</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Learn</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-lato text-lg font-semibold text-brand-white mb-4">Company</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-lato text-lg font-semibold text-brand-white mb-4">Legal</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-accent-orange transition-colors duration-300">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary-teal/30 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-center md:text-left mb-4 md:mb-0">&copy; <span id="currentYear"></span> PointPilot. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="text-light-grey/80 hover:text-accent-orange transition-colors duration-300">
+                        <img src="assets/icon_facebook.svg" alt="Facebook" class="w-6 h-6">
+                    </a>
+                    <a href="#" aria-label="Twitter" class="text-light-grey/80 hover:text-accent-orange transition-colors duration-300">
+                         <img src="assets/icon_twitter.svg" alt="Twitter" class="w-6 h-6">
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-light-grey/80 hover:text-accent-orange transition-colors duration-300">
+                        <img src="assets/icon_linkedin.svg" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
